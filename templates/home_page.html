@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type = "text/css" href="/static/styles/home_page.css">
+  </head>
+  <body>
+
+    <div class="title">
+    <h1>Laura's Oriflame</h1>
+    </div>
+
+  <div class="sign_up">
+    <p>Sign up</p>
+
+  <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username(size=32,placeholder="username") }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email(size=32,placeholder="email@gmail.com") }}<br>
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password(size=32,placeholder="password*$%!@") }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password2(size=32,placeholder="password*$%!@") }}<br>
+            {% for error in form.password2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+      </div>
+  </body>
+</html>

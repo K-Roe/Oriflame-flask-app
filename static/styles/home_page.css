@@ -1,0 +1,24 @@
+
+.title
+{
+    color:black;
+    text-align: center;
+}
+html
+{
+background-image:url("image/oriflame.jpg");
+height = 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+.sign_up
+{
+
+text-align: center;
+padding-top: 100px;
+margin-top: 300px;
+}
