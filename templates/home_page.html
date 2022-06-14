@@ -5,41 +5,32 @@
   </head>
   <body>
 
-    <div class="title">
+<div class="title">
     <h1>Laura's Oriflame</h1>
-    </div>
-
-  <div class="sign_up">
-    <p>Sign up</p>
-
-  <form action="" method="post">
+</div>
+<div class="sign_in">
+  <h1 style="color:red">Sign In</h1>
+    <p>New User? <a href="{{ url_for('reg_page') }}">Click to Register!</a></p>
+    <form action="" method="post">
         {{ form.hidden_tag() }}
         <p>
-            {{ form.username(size=32,placeholder="username") }}<br>
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.email(size=32,placeholder="email@gmail.com") }}<br>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}<br>
             {% for error in form.email.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
         <p>
-            {{ form.password(size=32,placeholder="password*$%!@") }}<br>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
             {% for error in form.password.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
-        <p>
-            {{ form.password2(size=32,placeholder="password*$%!@") }}<br>
-            {% for error in form.password2.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
+        <p>{{ form.remember() }} {{ form.remember.label }}</p>
         <p>{{ form.submit() }}</p>
     </form>
-      </div>
+</div>
+
   </body>
 </html>

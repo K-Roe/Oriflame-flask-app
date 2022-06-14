@@ -7,18 +7,19 @@
 html
 {
 background-image:url("image/oriflame.jpg");
-height = 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
 
 }
 
-
-.sign_up
+.sign_in
 {
+ display: inline-block;
 
-text-align: center;
-padding-top: 100px;
-margin-top: 300px;
+  position: relative;
+  /* Move the element to the right by 50% of the container's width */
+  left: 45%;
+  /* Calculates 50% of the element's width, and moves it by that */
+  /* amount across the X-axis to the left */
+  transform: translateX(-50%);
+  transform: translateY(150%);
+
 }
